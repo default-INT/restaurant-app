@@ -1,0 +1,1 @@
+export { EmptyCartPlaceholder } from './EmptyCartPlaceholder';

@@ -1,0 +1,19 @@
+import { memo } from 'react';
+import { Text, View } from 'react-native';
+import { styles } from './styles';
+
+interface IProps {
+  title: string;
+}
+
+export const EventTitle = memo((props: IProps) => {
+  const { title } = props;
+
+  return (
+    <View style={styles.textContainer}>
+      <Text style={styles.text}>{title}</Text>
+    </View>
+  );
+});
+
+EventTitle.displayName = 'EventTitle';

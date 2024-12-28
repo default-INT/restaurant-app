@@ -1,19 +1,9 @@
 import { createStaticNavigation, StaticParamList } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { RootScreen } from '@root/modules/RootScreen';
-import { HomeScreen } from '@root/modules/HomeScreen';
+import { MenuRootDrawer } from '../drawer/MenuRootDrawer';
 
-const RootStack = createNativeStackNavigator({
-  initialRouteName: 'Root',
-  screens: {
-    Root: RootScreen,
-    Home: HomeScreen,
-  },
-});
+export const RootNavigator = createStaticNavigation(MenuRootDrawer);
 
-export const RootNavigator = createStaticNavigation(RootStack);
-
-type TRootStackParamList = StaticParamList<typeof RootStack>;
+type TRootStackParamList = StaticParamList<typeof MenuRootDrawer>;
 
 declare global {
   namespace ReactNavigation {

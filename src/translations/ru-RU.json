@@ -2,5 +2,113 @@
   "root": {
     "welcome": "Добро пожадовать",
     "go_to_home": "Перейти домой"
+  },
+  "home": {
+    "categories": {
+      "brunch": "Обед",
+      "lunch": "Ланч",
+      "dessert": "Десерт"
+    },
+    "food_card": {
+      "weight": "{{ value }}г",
+      "actions": {
+        "add": "В КОРЗИНУ"
+      }
+    }
+  },
+  "contacts_screen": {
+    "title": "Контакты",
+    "fields": {
+      "phone_number": {
+        "label": "Номер"
+      },
+      "address": {
+        "label": "Адрес"
+      },
+      "data": {
+        "label": "Данные"
+      },
+      "zip": {
+        "label": "Индекс"
+      }
+    }
+  },
+  "booking_screen": {
+    "title": "Зарезервировать столик",
+    "submit": "ЗАБРОНИРОВАТЬ",
+    "fields": {
+      "name": {
+        "label": "Имя",
+        "placeholder": "Введите своё имя"
+      },
+      "phone_number": {
+        "label": "Номер телефона",
+        "placeholder": "Введите свой номер телефона"
+      },
+      "place": {
+        "label": "Столик",
+        "placeholder": "Введите номер столика"
+      },
+      "time": {
+        "label": "Время",
+        "placeholder": "Введите время бронирования"
+      },
+      "date": {
+        "label": "Дата",
+        "placeholder": "Введите дату бронирования"
+      }
+    },
+    "errors": {
+      "name": {
+        "max": "Текст не может быть больше 180 символов"
+      },
+      "phone_number": {
+        "max": "Текст не может быть больше 30 символов"
+      },
+      "place": {
+        "type_error": "Значение может быть только числовое"
+      }
+    }
+  },
+  "booking_success": {
+    "success_text": "Ваш резерв успешно размещен"
+  },
+  "basket_screen": {
+    "empty_cart": "Корзина пуста",
+    "total_price": "ИТОГО {{ value }}$"
+  },
+  "success_screen": {
+    "success_text": "Ваш заказ успешно размещен"
+  },
+  "events": {
+    "sections": {
+      "games": "Вечер Игр и Развлечений",
+      "cinema_and_dinner": "Вечер Кино с Ужином",
+      "rugby": "Регби-вечер",
+      "cricket": "Крикетный день"
+    },
+    "rugby": {
+      "title": "Регби-вечер",
+      "title_date": "29 ноября в 18:00",
+      "description": "Насладитесь захватывающими трансляциями важнейших регбийных матчей в атмосфере настоящего спортивного духа"
+    },
+    "cricket": {
+      "title": "Крикетный день",
+      "title_date": "30 ноября в 18:00",
+      "description": "<Cursive>Погрузитесь в мир увлекательных</Cursive> <Bold>крикетных матчей</Bold> в атмосфере, созданной специально для любителей этой игры, и <Cursive>насладитесь изысканными блюдами!</Cursive>"
+    }
+  },
+  "drawer": {
+    "StoreStack": "МАГАЗИН",
+    "BookingStack": "БРОНЬ",
+    "ContactsStack": "КОНТАКТЫ",
+    "EventsStack": "СОБЫТИЯ РЕСТОРАНА"
+  },
+
+  "common": {
+    "to_main": "НА ГЛАВНУЮ",
+    "errors": {
+      "required": "Поле обязательное для заполнения"
+    }
   }
 }

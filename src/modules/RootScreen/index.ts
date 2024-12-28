@@ -1,1 +1,0 @@
-export { RootScreen } from './RootScreen';
