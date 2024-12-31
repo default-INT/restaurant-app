@@ -21,7 +21,9 @@ export const SuccessOrderScreen = memo(() => {
 
   useEffect(() => {
     // some post request
-    userStore.completeOrder();
+    setTimeout(() => {
+      userStore.completeOrder();
+    }, 500);
   }, []);
 
   return (

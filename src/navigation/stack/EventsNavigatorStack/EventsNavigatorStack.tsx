@@ -32,12 +32,10 @@ export const EventsNavigatorStack = memo(() => {
       <Stack.Screen
         name={EventsNavigatorRoutes.Games}
         component={View}
-        options={{ header: () => null }}
       />
       <Stack.Screen
         name={EventsNavigatorRoutes.CinemaAndDinner}
         component={View}
-        options={{ header: () => null }}
       />
       <Stack.Screen name={EventsNavigatorRoutes.RugbyDay} component={RugbyScreen} />
       <Stack.Screen name={EventsNavigatorRoutes.CricketDay} component={CricketScreen} />

@@ -1,7 +1,10 @@
-import { memo } from 'react';
+import { memo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { CommonActions, StaticParamList, useNavigation } from '@react-navigation/native';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { ContactsNavigatorStack } from '@root/navigation/stack/ContactsNavigatorStack';
 import { AppButton } from '@root/components/AppButton';
 import { AppInput } from '@root/components/formFields/AppInput';
 import { ScreenTitle } from '@root/components/ScreenTitle';
@@ -16,6 +19,17 @@ const initialValues = {
 
 export const ContactsScreen = memo(() => {
   const { t } = useTranslation('contacts_screen');
+
+  const navigation = useNavigation<NativeStackNavigationProp<StaticParamList<
+    typeof ContactsNavigatorStack
+  >>>();
+
+  const handleToMain = useCallback(() => {
+    navigation.dispatch(CommonActions.reset({
+      index: 0,
+      routes: [{ name: 'StoreStack' }],
+    }));
+  }, [navigation]);
 
   return (
     <SafeAreaView edges={['bottom']} style={styles.root}>
@@ -44,7 +58,7 @@ export const ContactsScreen = memo(() => {
           />
         </View>
       </View>
-      <AppButton title={t('common:to_main')} />
+      <AppButton title={t('common:to_main')} onPress={handleToMain} />
     </SafeAreaView>
   );
 });

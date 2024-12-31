@@ -1,3 +1,5 @@
+import { ImageRequireSource } from 'react-native/Libraries/Image/ImageSource';
+
 export enum CategoriesType {
   Brunch,
   Lunch,
@@ -11,5 +13,5 @@ export interface IFood {
   type: CategoriesType
   weight: number
   price: number
-  imageUrl?: string
+  imageUrl?: string | ImageRequireSource
 }

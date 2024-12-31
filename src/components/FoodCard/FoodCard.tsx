@@ -45,7 +45,7 @@ export const FoodCard = observer((props: IProps) => {
         <View style={styles.imageContainer}>
           {item.imageUrl && (
             <Image
-              source={{ uri: item.imageUrl }}
+              source={typeof item.imageUrl === 'string' ? { uri: item.imageUrl } : item.imageUrl}
               style={styles.image}
               resizeMode='cover'
             />
